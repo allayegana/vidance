@@ -82,7 +82,7 @@ public class TopicoController {
         return ResponseEntity.notFound().build();
     }
 
-
+//aa
     @DeleteMapping("/{id}")
     @Transactional
     public ResponseEntity<?> remover(@PathVariable Long id) {
