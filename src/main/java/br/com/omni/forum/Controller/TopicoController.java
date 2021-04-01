@@ -1,9 +1,9 @@
 package br.com.omni.forum.Controller;
 
 
-import br.com.omni.forum.CursoRepository.CursoRepository;
-import br.com.omni.forum.Repository.TopicoRepository;
 import br.com.omni.forum.dto.TopicoDto;
+import br.com.omni.forum.repository.CursoRepository;
+import br.com.omni.forum.repository.TopicoRepository;
 import br.com.omni.forum.dto.detalhasDoTopicoDto;
 import br.com.omni.forum.form.TopicoForm;
 import br.com.omni.forum.form.atualizaoTopicoForm;
@@ -11,6 +11,7 @@ import br.com.omni.forum.modelo.Topico;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
+import org.springframework.data.domain.Pageable;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.util.UriComponentsBuilder;
@@ -18,7 +19,6 @@ import org.springframework.web.util.UriComponentsBuilder;
 
 import javax.transaction.Transactional;
 import javax.validation.Valid;
-import java.awt.print.Pageable;
 import java.net.URI;
 import java.util.Optional;
 
@@ -34,7 +34,7 @@ public class TopicoController {
 
 
     @GetMapping
-    public Page<TopicoDto> lista(@RequestParam(required = false) String nomeCurso,@RequestParam int pagina,@RequestParam int qtd) {
+    public Page<TopicoDto> lista(@RequestParam(required = false) String nomeCurso, @RequestParam int pagina, @RequestParam int qtd) {
 
         Pageable paginacao = PageRequest.of(pagina,qtd);
 

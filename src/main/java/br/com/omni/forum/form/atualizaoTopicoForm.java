@@ -1,6 +1,6 @@
 package br.com.omni.forum.form;
 
-import br.com.omni.forum.Repository.TopicoRepository;
+import br.com.omni.forum.repository.TopicoRepository;
 import br.com.omni.forum.modelo.Topico;
 import com.sun.istack.NotNull;
 import org.hibernate.validator.constraints.Length;

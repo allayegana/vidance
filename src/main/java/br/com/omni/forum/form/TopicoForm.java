@@ -1,6 +1,6 @@
 package br.com.omni.forum.form;
 
-import br.com.omni.forum.CursoRepository.CursoRepository;
+import br.com.omni.forum.repository.CursoRepository;
 import br.com.omni.forum.modelo.Curso;
 import br.com.omni.forum.modelo.Topico;
 import com.sun.istack.NotNull;

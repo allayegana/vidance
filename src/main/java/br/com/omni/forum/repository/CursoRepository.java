@@ -1,4 +1,4 @@
-package br.com.omni.forum.CursoRepository;
+package br.com.omni.forum.repository;
 
 import br.com.omni.forum.modelo.Curso;
 import org.springframework.data.jpa.repository.JpaRepository;
